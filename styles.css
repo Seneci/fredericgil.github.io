@@ -1,0 +1,119 @@
+body {
+    max-width: 1280px;
+    padding: 0 20px 0 20px;
+    margin: 0 auto 0 auto;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    color: #525152;
+    
+}
+
+/* GENERAL */
+
+/* Removes style from hyperlinked text */
+a:link { text-decoration: none; color:inherit;}
+a:visited { text-decoration: none; color:inherit;}
+a:hover { text-decoration: underline; }
+a:active { text-decoration: underline; }
+
+.section-title {
+    font-size: 30px;
+    color: #525152;
+}
+
+/* HEADER */
+
+.self-introduction {
+    display: grid;
+    gap: 0.5rem;
+    grid-auto-flow: column;
+    /*
+    grid-template-columns: min-content 1fr;
+    text-align: right; 
+    */
+    margin-bottom: 50px;
+}
+
+@media (max-width: 1050px) {
+    .self-introduction {
+        grid-auto-flow: row;
+    }
+
+    #hello {
+        display: none;
+    }
+}    
+
+
+.self-introduction > div > img {
+    /* Gives transparency on the bottom of the profile picture */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
+}
+
+.personal-info{
+    /* Centers vertically all the text on the header */
+    margin: auto 0 auto 0;
+    font-size: 20px;
+}
+
+.your-name {
+    margin: 0;
+    font-size: 100px;
+    /* Add this to the neme on the header */
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	    background-clip: text;
+	    -webkit-text-fill-color: transparent;
+}
+
+
+
+/* EXPERIENCE */
+.experience-section {
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.experience-div {
+    /* This is to create and set up the grid for an individual job experience*/
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: min-content 1fr;
+}
+
+.position-info > * {
+    /* Makes the information from the job position fit into the company's logo hight */
+    margin: auto 0 auto 0;
+}
+
+img.company-logo {
+    width: 75px;
+}
+
+.company-name,
+.job-title {
+    padding-bottom: 3px;
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: hwb(218 11% 49%);
+    
+    margin: auto 0 auto 0;
+}
+
+.job-title{
+    font-weight: normal;
+    font-size: 18px;
+    color: #525152;
+}
+
+.job-period {
+    font-weight: lighter;
+    font-size: 14px;
+    
+}
+
+.job-description > p {
+    margin: 0;
+}
