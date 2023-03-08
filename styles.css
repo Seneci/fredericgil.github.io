@@ -60,9 +60,7 @@ a:active { text-decoration: underline; }
     margin: 0;
     font-size: 100px;
     /* Add this to the neme on the header */
-    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
-	    background-clip: text;
-	    -webkit-text-fill-color: transparent;
+    hwb(218 11% 49%);
 }
 
 
